@@ -1,0 +1,7 @@
+sudo apt update
+sudo apt install git
+sudo echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list
+sudo apt install build-essential libelf-dev linux-headers-$(uname -r)
+git clone https://github.com/aircrack-ng/rtl8812au.git
+cd rtl88*
+sudo make dkms_install
